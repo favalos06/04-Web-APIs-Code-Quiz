@@ -5,57 +5,43 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
+
   <title>CodeQuiz</title>
 </head>
 
 <body>
   <header>
     <button>High Scores</button>
-    <p>Timer: <span></span></p>
+    <p>Timer: <span>0</span></p>
   </header>
-  <main>
-    <section>
-      <h1>Code Quiz</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et aliquam expedita quasi. Modi, iste. Hic non, numquam
-        architecto fuga animi dicta. Animi aut quisquam fuga molestiae itaque quas rerum pariatur!
+  
+  <div class="container">
+    <div id="start-screen" class="start">
+      <h1>Coding Quiz Challenge</h1>
+      <p><em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, aperiam. Consectetur natus quam
+          repudiandae accusantium laboriosam provident expedita sed tenetur.</em></p>
+      <button id="start">Start Quiz!</button>
+    </div>
+
+    <div id="questions" class="hide">
+      <h2 id="question-title"></h2>
+      <div id="choices" class="choices"></div>
+    </div>
+
+    <div id="end-screen" class="hide">
+      <h2>All done</h2>
+      <p>Your final score is <span id="final-score"></span>.</p>
+      <p>Enter intitials: <input type="text" id="initials" max="3" />
+        <button id="submit">Submit</button>
       </p>
-      <button>Start Button</button>
-    </section>
-    <section>
-      <h2>
-        Question?
-      </h2>
-      <ul>
-        <li>
-          <button>
-            Answer
-          </button>
-        </li>
-        <li>
-          <button>
-            Answer
-          </button>
-        </li>
-        <li>
-          <button>
-            Answer
-          </button>
-        </li>
-        <li>
-          <button>
-            Answer
-          </button>
-        </li>
-      </ul>
-    </section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-  </main>
+    </div>
+
+    <div id="feedback" class="feedback hide"></div>
+  </div>
+
+  <script src="./assets/js/questions.js"></script>
+  <script src="./assets/js/logic.js"></script>
 </body>
 
 </html>
