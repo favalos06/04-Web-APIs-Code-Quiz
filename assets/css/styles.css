@@ -3,7 +3,7 @@ body {
   font-size: 120%;
   margin: 0;
   padding: 0;
-  background: url('../img/bg.jpg') #000;
+  background: url("../img/bg.jpg") #000;
   background-repeat: no-repeat;
   background-size: cover;
   color: rgb(197, 197, 197);
@@ -12,20 +12,20 @@ body {
 }
 
 h1 {
-  font-family: 'Creepster', cursive;
+  font-family: "Creepster", cursive;
   font-size: 56px;
   color: #660000;
   margin-top: 0;
 }
 
 h2 {
-  font-family: 'Creepster', cursive;
+  font-family: "Creepster", cursive;
   font-size: 48px;
   margin-top: 0;
 }
 
 a {
-  font-family: 'Nosifer', cursive;
+  font-family: "Nosifer", cursive;
   color: #660000;
   text-decoration: none;
   transition: color 0.1s;
@@ -36,7 +36,7 @@ a:hover {
 }
 
 button {
-  font-family: 'Nosifer', cursive;
+  font-family: "Nosifer", cursive;
   display: inline-block;
   margin: 5px;
   cursor: pointer;
@@ -79,7 +79,7 @@ li:nth-child(odd) {
 .wrapper {
   margin: 100px auto 0 auto;
   max-width: 600px;
-  background: rgba(0,0,0,.6);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 30px;
   padding: 30px;
 }
@@ -93,9 +93,15 @@ li:nth-child(odd) {
 }
 
 .scores {
-  position: absolute;
-  top: 10px;
-  left: 10px;
+  text-align: right;
+}
+@media (min-width: 768px) {
+  .scores {
+    text-align: left;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
 }
 
 .feedback {
@@ -108,11 +114,16 @@ li:nth-child(odd) {
 }
 
 .timer {
-  font-family: 'Nosifer', cursive;
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  font-family: "Nosifer", cursive;
   color: #660000;
+  text-align: right;
+}
+@media (min-width: 768px) {
+  .timer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
 }
 
 #end-screen > h2 {
