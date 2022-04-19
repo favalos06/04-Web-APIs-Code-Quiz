@@ -10,7 +10,7 @@ var choicesEl = document.getElementById("choices");
 var submitBtn = document.getElementById("submit");
 var startBtn = document.getElementById("start");
 var initialsEl = document.getElementById("initials");
-var feedbackEl = document.getElementById("feedback");
+var resultEl = document.getElementById("result");
 
 // sound effects
 var sfxRight = new Audio("assets/sfx/correct.wav");
@@ -82,18 +82,18 @@ function questionClick() {
     // play "wrong" sound effect
     sfxWrong.play();
 
-    feedbackEl.textContent = "Wrong!";
+    resultEl.textContent = "Wrong!";
   } else {
     // play "right" sound effect
     sfxRight.play();
 
-    feedbackEl.textContent = "Correct!";
+    resultEl.textContent = "Correct!";
   }
 
-  // flash right/wrong feedback on page for half a second
-  feedbackEl.setAttribute("class", "feedback");
+  // flash right/wrong result on page for half a second
+  resultEl.setAttribute("class", "result");
   setTimeout(function () {
-    feedbackEl.setAttribute("class", "feedback hide");
+    resultEl.setAttribute("class", "result hide");
   }, 1000);
 
   // move to next question
