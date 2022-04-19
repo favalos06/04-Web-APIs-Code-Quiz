@@ -1,8 +1,3 @@
-// variables to keep track of quiz state
-var currentQuestionIndex = 0;
-var time = questions.length * 15;
-var timerId;
-
 // variables to reference DOM elements
 var questionsEl = document.getElementById("questions");
 var timerEl = document.getElementById("time");
@@ -11,6 +6,11 @@ var submitBtn = document.getElementById("submit");
 var startBtn = document.getElementById("start");
 var initialsEl = document.getElementById("initials");
 var resultEl = document.getElementById("result");
+
+// variables to keep track of quiz state
+var currentQuestionIndex = 0;
+var time = questions.length * 15;
+var timerId;
 
 // sound effects
 var sfxRight = new Audio("assets/sfx/correct.wav");
@@ -140,7 +140,7 @@ function clockTick() {
 function saveHighscore() {
   // get value of input box
   var initials = initialsEl.value.trim();
-
+  console.log(initials);
   // make sure value wasn't empty
   if (initials !== "") {
     // get saved scores from localstorage, or if not any, set to empty array
@@ -159,6 +159,10 @@ function saveHighscore() {
 
     // redirect to next page
     window.location.href = "highscores.html";
+  } else if (initials === ""){
+    // Style updates if no initials are entered
+    initialsEl.style.border = "5px solid #660000"
+    initialsEl.style.background = "#ffcccb"
   }
 }
 
