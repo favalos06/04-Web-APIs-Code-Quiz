@@ -2,26 +2,28 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Coding Quiz</title>
 
-  <title>CodeQuiz</title>
+  <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
 
 <body>
-  <header>
-    <button>High Scores</button>
-    <p>Timer: <span>0</span></p>
-  </header>
-  
-  <div class="container">
+  <div class="scores"><a href="highscores.html">View Highscores</a></div>
+
+  <div class="timer">Time: <span id="time">0</span></div>
+
+  <div class="wrapper">
     <div id="start-screen" class="start">
       <h1>Coding Quiz Challenge</h1>
-      <p><em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, aperiam. Consectetur natus quam
-          repudiandae accusantium laboriosam provident expedita sed tenetur.</em></p>
-      <button id="start">Start Quiz!</button>
+      <p>
+        Try to answer the following code-related questions within the time
+        limit. Keep in mind that incorrect answers will penalize your
+        score/time by ten seconds!
+      </p>
+      <button id="start">Start Quiz</button>
     </div>
 
     <div id="questions" class="hide">
@@ -30,9 +32,10 @@
     </div>
 
     <div id="end-screen" class="hide">
-      <h2>All done</h2>
+      <h2>All done!</h2>
       <p>Your final score is <span id="final-score"></span>.</p>
-      <p>Enter intitials: <input type="text" id="initials" max="3" />
+      <p>
+        Enter initials: <input type="text" id="initials" max="3" />
         <button id="submit">Submit</button>
       </p>
     </div>
