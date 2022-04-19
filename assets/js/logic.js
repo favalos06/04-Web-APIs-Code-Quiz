@@ -13,11 +13,15 @@ var initialsEl = document.getElementById("initials");
 var feedbackEl = document.getElementById("feedback");
 
 // sound effects
-var sfxRight = new Audio("assets/sfx/correct.mp3");
-var sfxWrong = new Audio("assets/sfx/incorrect.mp3");
+var sfxRight = new Audio("assets/sfx/correct.wav");
+var sfxWrong = new Audio("assets/sfx/incorrect.wav");
 var sfxFailed = new Audio("assets/sfx/failed.mp3");
+var sfxBoo = new Audio("assets/sfx/boo-and-laugh.wav");
 
 function startQuiz() {
+  // play "Boo" sound effect
+  sfxBoo.play();
+
   // hide start screen
   var startScreenEl = document.getElementById("start-screen");
   startScreenEl.setAttribute("class", "hide");
