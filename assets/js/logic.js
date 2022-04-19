@@ -13,8 +13,9 @@ var initialsEl = document.getElementById("initials");
 var feedbackEl = document.getElementById("feedback");
 
 // sound effects
-var sfxRight = new Audio("assets/sfx/correct.wav");
-var sfxWrong = new Audio("assets/sfx/incorrect.wav");
+var sfxRight = new Audio("assets/sfx/correct.mp3");
+var sfxWrong = new Audio("assets/sfx/incorrect.mp3");
+var sfxFailed = new Audio("assets/sfx/failed.mp3");
 
 function startQuiz() {
   // hide start screen
@@ -105,6 +106,9 @@ function questionClick() {
 function quizEnd() {
   // stop timer
   clearInterval(timerId);
+
+  // play "end" sound effect
+  sfxFailed.play();
 
   // show end screen
   var endScreenEl = document.getElementById("end-screen");
